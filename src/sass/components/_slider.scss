@@ -1,0 +1,18 @@
+.slider {
+    position: relative;
+}
+
+.slider__button {
+    cursor: pointer;
+    position: absolute;
+    padding: 25px;
+    top: 43%;
+    &_left {
+        left: -100px;
+    }
+    &_right {
+        transform: rotate(180deg);
+     right: -100px;
+    }
+
+}

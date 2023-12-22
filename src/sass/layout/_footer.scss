@@ -1,0 +1,30 @@
+.footer {
+    background-color: #D9A2C6;
+    padding: 34px;
+}
+.footer__layout-4-columns {
+    text-align: left;
+    
+    &>* {
+        flex-basis: 11%;
+        &:last-child{
+            flex-basis: 22%;
+        }
+    }
+}
+.footer__title {
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+
+
+.footer__link {
+    @include font(1.4rem, 2.4rem, 400);
+    text-decoration: none;
+    color: #262626;
+    white-space: nowrap;
+}
+
+.link-label{
+    color: #262626;
+}
