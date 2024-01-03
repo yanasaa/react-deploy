@@ -10,9 +10,8 @@ body {
   @extend %font-prim;
   max-width: 1440px;
   margin: auto;
-  background-color: $color-bg-light;
+  background-color: $color-light;
   user-select: none;
-
 }
 
 h1 {

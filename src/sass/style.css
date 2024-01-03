@@ -1,4 +1,4 @@
-.tag, .search__input, .icon, .button, .navigation__link {
+.tag, .search__input, .icon, .navigation__link {
   transition: all 0.3s ease-out;
 }
 
@@ -6,7 +6,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.search__input_hero, .search__input {
+.search__input_hero {
   font-family: "Roboto", sans-serif;
 }
 
@@ -424,7 +424,7 @@ body {
   font-style: normal;
   max-width: 1440px;
   margin: auto;
-  background-color: #fff;
+  background-color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -510,30 +510,6 @@ h3 {
   color: #ad2e95;
 }
 
-.button {
-  width: 167px;
-  padding: 8px 26px;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  font-weight: 700;
-  font-style: normal;
-  border-radius: 4px;
-}
-.button_bordered {
-  background-color: transparent;
-  border: 1px solid #ad2e95;
-  color: #ad2e95;
-}
-.button_colored {
-  background-color: #ad2e95;
-  color: white;
-  border: 1px solid #ad2e95;
-}
-.button_colored:hover {
-  background: rgba(173, 46, 149, 0.7);
-  border-color: rgba(173, 46, 149, 0.7);
-}
-
 .icon {
   display: inline-block;
 }
@@ -587,17 +563,6 @@ h3 {
   background-image: url("../images/icons/youtube.svg");
 }
 
-.logo {
-  display: block;
-  background-image: url("../images/icons/logo.svg");
-  width: 67px;
-  height: 87px;
-}
-
-.logo-color {
-  fill: #ad2e95;
-}
-
 .pagination {
   display: flex;
   padding: 50px;
@@ -617,40 +582,6 @@ h3 {
   max-width: 1160px;
   margin: 0 auto;
   text-align: center;
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  background-color: #EDDCE4;
-  padding: 0 40PX;
-  box-shadow: 0px 2px 4px 0px rgba(236, 179, 217, 0.5);
-  z-index: 1;
-}
-
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__navigation {
-  margin-right: auto;
-}
-
-.logo.header__logo {
-  margin: 15px 0 10px auto;
-}
-
-.header__wrapper a {
-  flex-grow: 1;
-}
-
-.header__buttons {
-  width: 50%;
-  display: flex;
-  gap: 30px;
-  justify-content: flex-end;
 }
 
 .layout-6-columns {
@@ -705,161 +636,6 @@ h3 {
           backdrop-filter: blur(11.8754043579px);
 }
 
-.footer {
-  background-color: #D9A2C6;
-  padding: 34px;
-}
-
-.footer__layout-4-columns {
-  text-align: left;
-}
-.footer__layout-4-columns > * {
-  flex-basis: 11%;
-}
-.footer__layout-4-columns > *:last-child {
-  flex-basis: 22%;
-}
-
-.footer__title {
-  padding: 0 0 20px 0;
-  text-align: left;
-}
-
-.footer__link {
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  color: #262626;
-  white-space: nowrap;
-}
-
-.link-label {
-  color: #262626;
-}
-
-.hero {
-  background-image: url("../images/backgrounds/mainbg-1.png");
-  background-size: cover;
-  margin-bottom: 200px;
-}
-
-.hero__wrapper {
-  padding: 120px 0 150px;
-}
-
-.hero__glass {
-  border-radius: 16px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.hero__content {
-  padding: 0 36px;
-  max-width: 563px;
-  text-align: left;
-}
-
-.search-bar {
-  margin: 0 auto;
-  border: 1px solid #ad2e95;
-  background-color: #ad2e95;
-  display: flex;
-  margin: 0 auto;
-}
-
-.search__input {
-  background-color: #fff;
-  border: none;
-  outline: none;
-  flex-grow: 1;
-  padding: 5px 10px;
-}
-
-.search__icons {
-  background-color: #ad2e95;
-  cursor: pointer;
-  text-align: center;
-}
-
-.search__icon {
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-image: url("../images/icons/Vector.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 15px;
-}
-
-.hero__title {
-  border-radius: 16px 16px 0 0;
-  padding: 10px 40px;
-  margin: 0;
-  color: #fff;
-  background: #ad2e95;
-  width: 100%;
-}
-
-.hero__text {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
-  margin: 0;
-  padding: 15px 0 30px;
-}
-
-.hero__tags_layout {
-  gap: 30px;
-  padding: 50px 0 20px;
-}
-
-.advantages {
-  margin-bottom: 200px;
-}
-
-.advantages__wrapper {
-  background-image: url("../images/backgrounds/advantages-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0 30px;
-}
-
-.advantage {
-  max-width: 32%;
-  padding: 80px 25px 45px;
-  text-align: center;
-}
-.advantage_author {
-  background: #d9a1c6;
-}
-.advantage_user {
-  background: #A1C2D1;
-}
-
-.advantage__title {
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-  font-weight: 400;
-  font-style: normal;
-  color: #050002;
-  margin-bottom: 30px;
-}
-
-.advantage__text {
-  margin: 0;
-  padding: 20px 10px;
-  color: white;
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .articles {
   margin-bottom: 200px;
 }
@@ -871,83 +647,9 @@ h3 {
   gap: 30px;
 }
 
-.onboarding {
-  background-image: url("../images/backgrounds/onboarding-bg.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-}
-
-.onboarding__wrapper {
-  padding: 45px;
-  height: 600px;
-  text-align: center;
-  margin-bottom: 200px;
-}
-
-.onboarding__text {
-  white-space: nowrap;
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.contact-us {
-  background: rgba(161, 194, 209, 0.5);
-  display: flex;
-}
-
-.contact-us__wrapper {
-  text-align: left;
-  padding: 0 100px 0 140px;
-  flex-grow: 1;
-  justify-content: start;
-}
-
-.contact-us__content {
-  text-align: left;
-}
-
-.contact-us__title {
-  max-width: 570px;
-  padding-left: 0;
-  padding-top: 45px;
-}
-
-.contact-us__form input:focus, .contact-us__form textarea:focus {
-  outline: none;
-}
-
-.contact-us__input {
-  display: block;
-  width: 48%;
-}
-
-textarea {
-  resize: none;
-  width: 100%;
-  height: 140px;
-}
-
-.contact-us__line {
-  position: relative;
-  margin-bottom: 19px;
-  justify-content: space-between;
-  width: 100%;
-  gap: 10px;
-}
-
-.contact-us__image {
-  text-align: right;
-}
-.contact-us__button {
-  padding: 50px 0;
-}
-
 .search-bar {
   border: 1px solid #ad2e95;
+  border: 1px solid #EDDCE4;
   margin-right: 0;
   background-color: #EDDCE4;
 }
@@ -960,6 +662,7 @@ textarea {
 
 .search__input {
   background-color: #EDDCE4;
+  background-color: #fff;
   width: 250px;
   border: none;
   margin-right: 10px;

@@ -1,32 +1,23 @@
-
 @import "abstracts/constants";
 @import "abstracts/mixins";
 @import "abstracts/placeholders";
 
-
 //base
 @import "base/normalize";
 @import "base/base";
-@import "base/navigation";
-@import "base/button";
+
+
 @import "base/icons";
-@import "base/logo";
 @import "base/pagination";
 @import "base/input";
 
 //layout
 @import "layout/wrapper";
-@import "layout/header";
 @import "layout/columns";
 @import "layout/glass";
-@import "layout/footer";
 
-//components 
-@import "components/hero";
-@import "components/advantages";
+//components
 @import "components/articles";
-@import "components/onboarding";
-@import "components/contact-us";
 @import "components/search-bar";
 @import "components/tag";
 @import "components/article-preview";

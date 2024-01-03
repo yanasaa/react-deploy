@@ -1,7 +1,7 @@
 .search-bar {
     
     border: 1px solid $color-primary;
-    // border: 1px solid $color-primary-light-header;
+    border: 1px solid $color-primary-light-header;
     margin-right: 0;
    background-color: $color-primary-light-header;
     &_hero {
@@ -15,7 +15,7 @@
 
 .search__input{
     background-color: $color-primary-light-header;
-    // background-color: $color-bg-light;
+    background-color: $color-bg-light;
     width: 250px;
     border: none;
     margin-right: 10px;
