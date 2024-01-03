@@ -1,5 +1,3 @@
-
-
 function Image(props) {
     const {src, alt, className} = props;
 
