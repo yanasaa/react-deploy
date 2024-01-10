@@ -7,7 +7,7 @@
 }
 
 .hero {
-  background-image: url("../../../../../images/backgrounds/mainbg-1.png");
+  background-image: url("../../../../images/backgrounds/mainbg-1.png");
   background-size: cover;
   margin-bottom: 200px;
 }
@@ -34,10 +34,10 @@
   text-align: left;
 }
 
-.search-bar {
+.search-bar_hero {
   margin: 0 auto;
   border: 1px solid #ad2e95;
-  background-color: #ad2e95;
+  background-color: black;
   display: flex;
   margin: 0 auto;
 }
@@ -60,7 +60,7 @@
   display: block;
   width: 15px;
   height: 15px;
-  background-image: url("../../../../../images/icons/Vector.png");
+  background-image: url("../../../../images/icons/Vector.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin: 15px;

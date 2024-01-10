@@ -7,10 +7,13 @@
 }
 
 .search-bar {
-  border: 1px solid #ad2e95;
+  border: 1px solid transparent;
   border: 1px solid #EDDCE4;
   margin-right: 0;
   background-color: #EDDCE4;
+  margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
 }
 .search-bar_hero {
   border: 1px solid #ad2e95;
@@ -64,4 +67,4 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 15px;
-}/*# sourceMappingURL=Searchbar.css.map */
+}/*# sourceMappingURL=SearchBar.css.map */

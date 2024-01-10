@@ -1,5 +1,7 @@
 import data from "../../../../components/fortemtests/data";
 import './Articles.scss'
+import article1 from '../../../../images/articles/article1.png';
+import Image from "../../../../components/shared/ui/image/Image";
 
 function Articles() {
   return (
@@ -16,7 +18,7 @@ function Articles() {
                     <div className="card" key={index}>
                       <div className="article-preview">
                         <div className="article-preview__image">
-                          {/* <img src={item.img} alt="Керамика" /> */}
+                          <Image src={article1} alt="Керамика" />
                         </div>
                         <div className="card-body">
                           <h3 className="article__title">{item.title}</h3>
