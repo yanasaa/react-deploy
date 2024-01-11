@@ -31,9 +31,10 @@
 .search-bar_hero {
   margin: 0 auto;
   border: 1px solid $color-primary;
-  background-color: black;
+  background-color: $color-bg-light;
   display: flex;
   margin: 0 auto;
+  justify-content: flex-end;
 }
 
 .search__input {
@@ -83,6 +84,7 @@
 }
 
 .tag {
+  display: flex;
   cursor: pointer;
   padding: 15px 20px;
   color: $color-primary;
@@ -95,4 +97,7 @@
     background-color: $color-primary;
     color: $color-bg-light;
   }
+}
+.tag__title {
+  margin: auto;
 }

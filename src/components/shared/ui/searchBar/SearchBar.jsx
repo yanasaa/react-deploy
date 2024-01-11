@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SearchOutlined } from "@ant-design/icons";
 import Input from "../input/Input";
 import './SearchBar.scss';
 
@@ -9,7 +10,7 @@ function SearchBar(props) {
         <div className={className}>
           {isActive && <Input className="search__input" type="search" placeholder="Поиск" />}
           <div className="search__icons">
-            <span className="icon search__icon" onClick={e => setIsActive(!isActive)}></span>
+            <SearchOutlined className="icon search__icon" onClick={e => setIsActive(!isActive)} />
           </div>
         </div>
     )

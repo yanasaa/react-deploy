@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .articles {
   margin-bottom: 200px;
 }
@@ -9,7 +10,12 @@
   gap: 30px;
 }
 
+.card {
+  cursor: pointer;
+}
+
 .article-preview {
+  background-color: #fff;
   text-align: left;
   padding: 19px;
   border-radius: 20px;
@@ -32,6 +38,10 @@
 .article__title {
   color: #050002;
   text-align: left;
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
 }
 
 .article__text {
@@ -41,6 +51,10 @@
   line-height: 2.4rem;
   font-weight: 400;
   font-style: normal;
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
 }
 
 .article__info {

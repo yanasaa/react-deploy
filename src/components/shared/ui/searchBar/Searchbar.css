@@ -12,6 +12,8 @@
   margin-right: 0;
   background-color: #EDDCE4;
   margin: 0 auto;
+  width: 100%;
+  justify-content: flex-end;
   display: flex;
   margin: 0 auto;
 }
@@ -55,16 +57,7 @@
   width: 32px;
   height: 32px;
   display: inline-block;
-  background-image: url("../../../../images/icons/search-icon.svg");
   background-size: 100%;
   background-position: center;
   margin: 0;
-}
-.search__icon_hero {
-  width: 15px;
-  height: 15px;
-  background-image: url("../../../../images/icons/Vector.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 15px;
 }/*# sourceMappingURL=SearchBar.css.map */

@@ -37,9 +37,10 @@
 .search-bar_hero {
   margin: 0 auto;
   border: 1px solid #ad2e95;
-  background-color: black;
+  background-color: #fff;
   display: flex;
   margin: 0 auto;
+  justify-content: flex-end;
 }
 
 .search__input {
@@ -91,6 +92,7 @@
 }
 
 .tag {
+  display: flex;
   cursor: pointer;
   padding: 15px 20px;
   color: #ad2e95;
@@ -105,4 +107,8 @@
 .tag:hover {
   background-color: #ad2e95;
   color: #fff;
+}
+
+.tag__title {
+  margin: auto;
 }/*# sourceMappingURL=Hero.css.map */
