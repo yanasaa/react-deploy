@@ -1,30 +1,39 @@
-import SearchBar from "../../../../components/shared/ui/searchBar/SearchBar";
 import "./Hero.scss";
-import data from "../../../../components/fortemtests/data";
+import { useEffect, useState } from "react";
 
-function Hero() {
-  const unicTags = Array.from(new Set(data.cardData.map((el) => el.tag)));
+function Hero({categoryId, onClickCategory}) {
+  const [tags, setTags] = useState([]);
+  useEffect(() => {
+    const getAllTags = () => {
+      fetch("http://84.38.183.195/api/v1/categories/")
+        .then((response) => response.json())
+        .then((json) => setTags(json));
+    };
+    getAllTags();
+  }, []);
+
+  function getUniqTags(tags) {
+    return Array.from(new Set(tags.map((el) => el.tag)));
+  }
+
   return (
     <section className="hero" id="hero">
       <div className="wrapper hero__wrapper">
         <div className="glass hero__glass">
-          <h1 className="hero__title hero__content">CRAFTSHARE</h1>
+          <h1 className="hero__title">CRAFTSHARE</h1>
           <div className="hero__content">
             <p className="hero__text">
               Cервис для ремесленников и для тех, кто хочет научиться чему-то
               новому
             </p>
-            <SearchBar className="search-bar_hero" isActive={true} />
+            {/* <SearchBar className="search-bar_hero" isActive={true} /> */}
             <div className="hero__tags">
               <div className="layout-2-columns hero__tags_layout">
-                {unicTags.map(
-                  (el, index) =>
-                    el && (
-                      <div className="tag" key={index}>
-                        <h3 className="tag__title">{el}</h3>
-                      </div>
-                    )
-                )}
+                {(tags ? tags : getUniqTags(tags)).slice(0, 8).map((el, i) => (
+                  <div className="tag" key={el.id} onClick={() => onClickCategory(el.id)}>
+                    <h3 className="tag__title">{el.name}</h3>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

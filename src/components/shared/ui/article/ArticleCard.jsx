@@ -1,40 +1,55 @@
-import data from "../../../fortemtests/data";
+import { useNavigate } from "react-router-dom";
 import { LikeTwoTone } from "@ant-design/icons";
-import article1 from "../../../../images/articles/article1.png";
+import { ROUTES } from "../../consts/routes";
 import "./ArticleCard.scss";
-import Image from "../image/Image";
 
 function ArticleCard(props) {
-  const { className } = props;
+  const { className, title, body, slug, likes, author, imgSrc, publish } =
+    props;
+  let navigate = useNavigate();
+  function handleClick() {
+    navigate(`${ROUTES.MAIN}${slug}`);
+    window.scrollTo(0, 0);
+  }
+
+  function getDate(date) {
+    let myDate = new Date(date);
+    const options = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
+    return myDate.toLocaleString("ru-RU", options);
+  }
   return (
-    <div className={className}>
+    <div className={className} onClick={handleClick}>
       <div className="card">
         <div className="article-preview__image">
-          <img src={article1} alt="Керамика" />
+          <img
+            src={
+              imgSrc
+                ? imgSrc
+                : "https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=2270&ar=2:1&fit=crop"
+            }
+            alt={title}
+          />
         </div>
         <div className="card-body">
-          <h3 className="article__title">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cum.
-          </h3>
-          <p className="article__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
-            veniam cupiditate itaque repellendus laborum animi consectetur modi
-            ea neque natus facere esse impedit eum quam quisquam, tempore nobis
-            dolorum officia veritatis nesciunt? Cupiditate nam, dolore, quasi
-            minus, ipsam voluptatibus recusandae minima repellat vitae soluta
-            libero laborum animi illum? Ratione, quas.
+          <h3 className="article-preview__title">{title}</h3>
+          {/* <p className="article-preview__text" dangerouslySetInnerHTML={{ __html: body }}></p> */}
+          <p className="article-preview__text" title={body}>
+            {body}
           </p>
-          <div className="article__info">
-            <div className="likes">
-              <LikeTwoTone
-                twoToneColor="#eb2f96"
-                className="likes__icon icon"
-              />
-              156
-            </div>
-            <span className="article__date">10 Дек 2023</span>
-            <span className="article__author">Анна Попова</span>
+        </div>
+        <div className="article-preview__info">
+          <div className="likes">
+            <LikeTwoTone twoToneColor="#eb2f96" className="likes__icon icon" />
+            <span>{likes}</span>
           </div>
+          <span className="article-preview__date">
+            {publish ? getDate(publish) : ""}
+          </span>
+          <p className="article-preview__author">{author}</p>
         </div>
       </div>
     </div>
