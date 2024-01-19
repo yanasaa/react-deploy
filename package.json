@@ -1,6 +1,7 @@
 {
   "name": "craft-app",
   "version": "0.1.0",
+  "homepage": "https://yanasaa.github.io/react-deploy/",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
