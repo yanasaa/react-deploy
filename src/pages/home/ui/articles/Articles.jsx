@@ -1,18 +1,27 @@
-import { Pagination, Spin } from "antd";
+import { Pagination } from "antd";
 import { useEffect, useState } from "react";
 import "./Articles.scss";
 import ArticleCard from "../../../../components/shared/ui/article/ArticleCard";
+import Button from "../../../../components/shared/ui/button/Button";
 
-function Articles({ categoryId }) {
+function Articles({
+  categoryId,
+  onClickCategory,
+  searchValue,
+  setSearchValue,
+}) {
+  console.log(searchValue, "articles");
   const [articles, setArticles] = useState([]);
   const [total, setTotal] = useState("");
   const [page, setPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(6);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const url = categoryId
+    ? `http://84.38.183.195/api/v1/category/${categoryId}`
+    : `http://84.38.183.195/api/v1/posts/?search=${searchValue}`;
 
   useEffect(() => {
     const getAllArticles = () => {
-      fetch(`http://84.38.183.195/api/v1/posts`, {
+      fetch(url, {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -22,16 +31,10 @@ function Articles({ categoryId }) {
         .then((json) => {
           setArticles(json);
           setTotal(json.length);
-          setIsLoaded(true);
         });
     };
     getAllArticles();
-  }, []);
-
-  console.log(articles);
-
-  // const filterUrl = `http://84.38.183.195/api/v1/category/${2}/`
-  // const searchUrl = `http://84.38.183.195/api/v1/posts/?search=${param}`
+  }, [categoryId, searchValue, url]);
 
   const indexOfFirstPage = page * postsPerPage - postsPerPage;
   const indexOfLastPage = indexOfFirstPage + postsPerPage;
@@ -63,6 +66,13 @@ function Articles({ categoryId }) {
   return (
     <section className="articles" id="articles">
       <h2 className="articles__title">Статьи Авторов</h2>
+      {!!categoryId && (
+        <Button
+          className="button button_colored articles__filter-btn"
+          btnText="Сбросить фильтры"
+          onClick={() => onClickCategory(0)}
+        />
+      )}
       <div className="slider__wrapper">
         <div className="articles__wrapper">
           <div className="wrapper">
@@ -85,8 +95,9 @@ function Articles({ categoryId }) {
             current={page}
             showSizeChanger={false}
             showQuickJumper
+            locale={{ jump_to: "Перейти на", page: "стр" }}
             onShowSizeChange={onShowSizeChange}
-            // pageSizeOptions={[6, 9, 30, 90]}
+            hideOnSinglePage
           ></Pagination>
         </div>
       </div>

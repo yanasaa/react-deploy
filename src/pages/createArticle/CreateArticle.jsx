@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./CreateArticle.scss";
 
 function CreateArticle() {
@@ -23,7 +23,7 @@ function CreateArticle() {
 
   function submit(e) {
     e.preventDefault();
-    const res = fetch(url, {
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8",

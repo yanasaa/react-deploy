@@ -6,20 +6,31 @@ import Hero from "./ui/hero/Hero";
 import Onboarding from "./ui/onboarding/Onboarding";
 
 function Home() {
+  const [categoryId, setCategoryId] = useState(0);
+  const [searchValue, setSearchValue] = useState("");
 
-  const [categoryId, setCategoryId] = useState(5)
   return (
     <>
-      <Hero categoryId={categoryId} onClickCategory={show}/>
+      <Hero
+        categoryId={categoryId}
+        onClickCategory={(id) => {
+          setCategoryId(id);
+          window.scrollTo(0, 2150);
+        }}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <Advantages />
-      <Articles categoryId={categoryId}/>
+      <Articles
+        categoryId={categoryId}
+        onClickCategory={(id) => setCategoryId(id)}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <Onboarding />
       <ContactUs />
     </>
   );
 }
 
-function show(id) {
-  console.log(id)
-}
 export default Home;
